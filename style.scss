@@ -3,4 +3,147 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    img {
+        height: 4rem;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        font-size: 4rem;
+        color: #333;
+        font-family: 'Merienda One', cursive;
+    }
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #73a2c6;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5rem 2rem;
+        .logo img {
+            height: 2rem;
+        }
+        .navbar a {
+            margin-left: 2rem;
+            font-size: 2rem;
+            color: #333;
+            &:hover {
+                text-decoration: underline;
+                color: #73a2c6;
+            }
+        }
+    }
+}
+
+#menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.home-bg {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.884), transparent 70%), url(./images/home_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .home {
+        min-height: 90rem;
+        display: flex;
+        align-items: center;
+        .content {
+            width: 40rem;
+            text-align: center;
+            h3 {
+                text-align: start;
+                font-size: 6rem;
+                color: #333;
+                font-family: 'Merienda One', cursive;
+            }
+            p {
+                padding: 1rem 0;
+                font-size: 1.6rem;
+                color: #333;
+                line-height: 2;
+                text-align: start;
+            }
+        }
+    }
+}
+
+.galerie .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    .box {
+        text-align: center;
+        img {
+            height: 34rem;
+            width: 50rem;
+            margin-bottom: .5rem;
+        }
+    }
+}   
+
+.monuments .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    .box {
+        text-align: center;
+        img {
+            height: 34rem;
+            width: 50rem;
+            margin-bottom: .5rem;
+        }
+        h3 {
+            font-size: 2rem;
+            color:#333;
+            margin: 1rem 0;
+        }
+    }
 }
