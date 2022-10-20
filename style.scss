@@ -7,6 +7,7 @@
     border: none;
     text-decoration: none;
 }
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -34,7 +35,6 @@ section {
     }
 }
 
-
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -42,6 +42,7 @@ section {
     cursor: pointer;
     color: #fff;
     font-size: 1.8rem;
+    border-radius: 5px;
     padding: 1rem 3rem;
     &:hover {
         background-color: #333;
@@ -63,7 +64,7 @@ section {
         position: relative;
         padding: 1.5rem 2rem;
         .logo img {
-            height: 2rem;
+            height: 1.5rem;
         }
         .navbar a {
             margin-left: 2rem;
@@ -77,15 +78,8 @@ section {
     }
 }
 
-#menu-btn {
-    display: none;
-    font-size: 2.5rem;
-    color: #333;
-    cursor: pointer;
-}
-
 .home-bg {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.884), transparent 70%), url(./images/home_bg.png) no-repeat;
+    background: linear-gradient(90deg, rgb(255, 255, 255), transparent 70%), url(./images/home_bg.png) no-repeat;
     background-size: cover;
     background-position: center;
     .home {
@@ -98,13 +92,13 @@ section {
             h3 {
                 text-align: start;
                 font-size: 6rem;
-                color: #333;
+                color: rgb(0, 0, 0);
                 font-family: 'Merienda One', cursive;
             }
             p {
                 padding: 1rem 0;
                 font-size: 1.6rem;
-                color: #333;
+                color: rgb(0, 0, 0);
                 line-height: 2;
                 text-align: start;
             }
@@ -114,19 +108,23 @@ section {
 
 .galerie .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 1.5rem;
     align-items: flex-start;
-    justify-content: center;
     .box {
         text-align: center;
         img {
-            height: 34rem;
-            width: 50rem;
-            margin-bottom: .5rem;
+            height: 30rem;
+            width: 100%;
+            object-fit: cover;
+        }
+        h3 {
+            font-size: 2rem;
+            color: #333;
+            margin: 1rem 0;
         }
     }
-}   
+}
 
 .monuments .box-container {
     display: grid;
@@ -136,14 +134,42 @@ section {
     .box {
         text-align: center;
         img {
-            height: 34rem;
-            width: 50rem;
-            margin-bottom: .5rem;
+            height: 30rem;
+            width: 100%;
+            object-fit: cover;
         }
         h3 {
             font-size: 2rem;
-            color:#333;
+            color: #333;
             margin: 1rem 0;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    .image {
+        flex: 1 1 40rem;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        flex: 1 1 40rem;
+        h3 {
+            font-size: 4.5rem;
+            color: #333;
+            font-family: 'Merienda One', cursive;
+            padding-bottom: 1rem;
+        }
+        p {
+            padding: 1rem 0;
+            line-height: 2;
+            color: #666;
+            font-size: 1.5rem;
         }
     }
 }
